@@ -1,0 +1,283 @@
+/* Start variables */
+:root {
+  --main-color: gold;
+  --main-background: #3a133b;
+  --section-margin: 30px;
+
+  /* --main-color: #5f1F61;*/
+  --second-color: #f8c04b;
+  --main-bg-color: #fff;
+  --second-bg-color: #ffcefe;
+}
+
+/* end variables */
+/* Start glopal rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* medium */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* large */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* x-large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* start header */
+header {
+  position: relative;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  background-color: var(--main-background);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 78.1px;
+}
+
+header .container::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #a2a2a2;
+  bottom: 0;
+  width: calc(100% - 30px);
+  left: 15;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+header nav .toggle-menu {
+  color: white;
+  font-size: 22px;
+}
+
+@media (min-width: 768px) {
+  header nav .toggle-menu {
+    display: none;
+  }
+}
+
+header nav ul {
+  display: flex;
+}
+
+@media (max-width: 767px) {
+  header nav ul {
+    display: none;
+    background-color: var(--main-background);
+    opacity: 70%;
+  }
+
+  header nav .toggle-menu:hover + ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0 / 50%);
+  }
+
+  header nav ul li a {
+    padding: 15px !important;
+  }
+}
+
+header nav ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  padding: 30px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+header nav ul li a.active,
+header nav ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+header nav .form {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+}
+
+header nav .form i {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+/* End Header */
+
+.card-container {
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: 1fr;
+  row-gap: 6rem;
+}
+
+.card {
+  background-color: var(--main-background);
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.card h1 {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.date {
+  color: #f6e9d8;
+  font-size: 1rem;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: var(--second-color);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.card .card-details {
+  margin-bottom: 1rem;
+}
+
+.date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.date-container img {
+  margin-right: 0.5rem;
+}
+
+/* Start Footer */
+footer {
+  background-color: #5f1f61;
+  background-image: url(../img/ramadan2.png);
+  background-repeat: repeat-x;
+}
+.footer-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(minmax(2, 400px));
+}
+
+.footer-pages h1 {
+  color: #f8c04b;
+  margin-bottom: 1rem;
+}
+
+.footer-page {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.footer-contact {
+  padding-top: 30px;
+  border-radius: 1px solid black;
+}
+.footer-hours h1 {
+  color: #f8c04b;
+  margin-bottom: 1rem;
+}
+.contact-1 {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.footer-hours p {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.copy {
+  color: #f8c04b;
+  text-align: center;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+/* End Footer */
